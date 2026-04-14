@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>संस्कृती जनजागृती संस्था </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import Baloo 2 font */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+        /* Custom styles for the body and main container */
+        body {
+            background: linear-gradient(180deg, #fff7e8 0%, #f9d5ba 100%);
+            font-family: 'Baloo 2', cursive, serif;
+            color: #651e1e;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth; /* Smooth scroll for anchor links */
+        }
+
+        .container {
+            max-width: 1550px; /* Slightly wider container */
+            margin: 30px auto; /* Add margin top/bottom */
+            background: #ffdcbc;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgb(180 115 72 / 0.3);
+            padding: 30px 40px 40px 40px;
+            border-top: 12px solid #c95c1c;
+            border-bottom: 12px solid #c95c1c;
+        }
+
+        /* Header specific styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        /* Flag and Cow image container styles */
+        .flag, .cow {
+            flex: 0 0 100px; /* Fixed width for the containers */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+            margin: 0 20px; /* Space between images and center title */
+        }
+
+        /* Flag and Cow image styles */
+        .flag img, .cow img {
+            max-width: 90px; /* Max width for images */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px; /* Rounded corners for images */
+        }
+
+        .center-top {
+            text-align: center;
+            flex-grow: 1;
+            position: relative;
+            font-weight: 700;
+            color: #d74900;
+            font-size: 1.2rem;
+            user-select: none;
+        }
+
+        .center-top .title-marathi {
+            font-family: 'Baloo 2', cursive, serif;
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: 6px;
+            color: #b43a0a;
+        }
+
+        .center-top .subtitle-marathi {
+            font-family: 'Baloo 2', cursive, serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-style: italic;
+            text-shadow: 0 0 2px #ba6a1a;
+            margin-bottom: 6px;
+        }
+
+        /* Horizontal rule styles */
+        hr.red-line {
+            border: 0;
+            height: 2px;
+            background: #c74614;
+            margin: 20px auto; /* Centered and more vertical space */
+            width: 80%; /* Make it responsive */
+            max-width: 300px; /* Limit max width */
+        }
+
+        /* Text styles */
+        .marathi-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6f1d0d;
+            line-height: 1.6;
+            text-align: justify; /* Justify text for better readability */
+        }
+        .marathi-text b {
+            color: #a23407; /* Highlighted text color */
+        }
+        .marathi-text a {
+            color: #c95c1c; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        .marathi-text a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #a23407; /* Darker color on hover */
+        }
+        .marathi-text p {
+            margin-bottom: 15px; /* Space between paragraphs */
+        }
+        .marathi-text ul {
+            margin-left: 20px; /* Indent list items */
+            list-style-type: disc; /* Use disc for list items */
+        }
+        .marathi-text ul li {
+            margin-bottom: 10px; /* Space between list items */
+        }
+        .marathi-text ul li b {
+            color: #a23407; /* Highlighted list item text */
+        }
+        .marathi-text ul li a {
+            color: #c95c1c; /* Link color in lists */
+            text-decoration: none; /* Remove underline */
+        }
+        .marathi-text ul li a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #a23407; /* Darker color on hover */
+        }
+        .marathi-text strong {
+            color: #a23407; /* Strong text color */
+        }
+        .marathi-text em {
+            font-style: italic; /* Italicize emphasized text */
+            color: #a23407; /* Emphasized text color */
+        }
+        .marathi-text code {
+            background-color: #f0f0f0; /* Light background for code */
+            padding: 2px 4px; /* Padding for code */
+            border-radius: 4px; /* Rounded corners for code */
+            font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+        }
+        .marathi-text blockquote {
+            border-left: 4px solid #c95c1c; /* Left border for blockquote */
+            padding-left: 15px; /* Padding for blockquote */
+            color: #6f1d0d; /* Color for blockquote text */
+            margin: 15px 0; /* Margin for blockquote */
+            font-style: italic; /* Italicize blockquote text */
+        }
+
+        .highlight-blue {
+            color: #2a478b;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .highlight-red {
+            color: #a91e08;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* General style for names sections to apply consistent block styling */
+        .names-section-block {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            color: #3e3e7a;
+            line-height: 1.45;
+            white-space: pre-line; /* Preserves line breaks */
+            text-align: center; /* Changed from 'justify' to 'center' */
+        }
+        .names-section-block a {
+            color: #c95c1c; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        .names-section-block a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #a23407; /* Darker color on hover */
+        }
+        .names-section-block strong {
+            color: #a23407; /* Strong text color */
+        }
+
+        .names-section-block b {
+            color: #a23407;
+        }
+
+        .footer-invite {
+            background-color: #9e2f1e;
+            color: #fff4e4;
+            font-weight: 700;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 1.1rem;
+            margin: 27px 0 20px 0;
+            text-align: center;
+            text-shadow: 1px 1px 3px #420f04;
+            user-select: none;
+        }
+
+        .footer-text {
+            color: #8b4b2e;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .underline-red {
+            text-decoration: underline;
+            text-decoration-color: #db4520;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 3px;
+        }
+
+        /* Navbar specific styles */
+        .navbar {
+            background-color: #c95c1c; /* A color from the border */
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            max-width: 950px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center; /* Center the nav items */
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-link {
+            color: #fff7e8;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none; /* Ensure no underline for nav links */
+        }
+
+        .navbar-link:hover {
+            background-color: #a94a15; /* Darker shade on hover */
+            color: #fff;
+        }
+
+        /* Section styling for content blocks */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff7e8;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            font-size: 2.5rem; /* Larger heading for sections */
+            font-weight: 700;
+            color: #b43a0a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #b43a0a; /* Consistent color for subheadings */
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Style for headings of dignitary lists */
+        .dignitary-heading {
+            font-weight: 700; 
+            color: #a93727;
+            margin-top: 2rem; 
+            margin-bottom: 1rem; 
+        }
+/* Optimized Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    /* This creates a flexible grid that fits as many boxes as possible per row */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffefe0;
+    border-radius: 12px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+}
+
+.image-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #f2e3d5;
+}
+
+.image-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(180, 58, 10, 0.15);
+}
+
+.image-item img {
+    width: 100%;
+    /* Aspect ratio ensures images look like uniform boxes regardless of source size */
+    aspect-ratio: 7/8; 
+    object-fit: cover; 
+    display: block;
+    border-bottom: 2px solid #ffefe0;
+    transition: transform 0.5s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* Subtle zoom effect on the image */
+}
+
+.image-item-details {
+    padding: 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.image-item-details h4 {
+    font-weight: 800;
+    color: #b43a0a;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.image-item-details p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #651e1e;
+    line-height: 1.4;
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr; /* Single column for small phones */
+        padding: 10px;
+    }
+    
+    .image-item img {
+        aspect-ratio: 16 / 9; /* Wider boxes on small screens */
+    }
+}
+        /* Call to action button style */
+        .btn {
+            display: inline-block;
+            background-color: #a91e08;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none; /* Ensure no underline for button links */
+        }
+
+        .btn:hover {
+            background-color: #651e1e;
+            transform: translateY(-2px);
+        }
+
+        /* Custom styles for the new layout structure */
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Default to single column */
+            gap: 20px;
+            margin-top: 20px;
+            justify-items: center; /* Add this to center grid items */
+        }
+
+        @media (min-width: 768px) {
+            .event-grid {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+                justify-items: stretch; /* Reset for two columns to stretch */
+            }
+        }
+
+        .event-block {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the text within the block */
+        }
+        .event-block.highlight-blue {
+            background-color: #e0f2ff; /* Light blue background */
+            color: #2a478b; /* Dark blue text */
+        }
+        .event-block.highlight-red {
+            background-color: #ffe0e0; /* Light red background */
+            color: #a91e08; /* Dark red text */
+        }
+        .event-block.names-section-block {
+            background-color: #f0f0f0; /* Light gray background for names sections */
+            color: #3e3e7a; /* Darker text color for better contrast */
+            font-weight: 600;
+            line-height: 1.45;
+            white-space: pre-line; /* Preserve line breaks */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            text-align: center; /* Ensures text is centered within these specific blocks */
+        }
+        .event-block.names-section-block b {
+            color: #a23407; /* Highlighted text color */
+        }
+        .event-block.names-section-block a {
+            color: #c95c1c; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        .event-block.names-section-block a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #a23407; /* Darker color on hover */
+        }
+        .event-block.names-section-block strong {
+            color: #a23407; /* Strong text color */
+        }
+        .event-block.names-section-block em {
+            font-style: italic; /* Italicize emphasized text */
+            color: #a23407; /* Emphasized text color */
+        }
+        .event-block.names-section-block code {
+            background-color: #f0f0f0; /* Light background for code */
+            padding: 2px 4px; /* Padding for code */
+            border-radius: 4px; /* Rounded corners for code */
+            font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+            color: #3e3e7a; /* Darker text color for better contrast */
+
+        }
+        .event-block.names-section-block blockquote {
+            border-left: 4px solid #c95c1c; /* Left border for blockquote */
+            padding-left: 15px; /* Padding for blockquote */
+            color: #6f1d0d; /* Color for blockquote text */
+            margin: 15px 0; /* Margin for blockquote */
+            font-style: italic; /* Italicize blockquote text */
+        }
+
+        .event1-grid {
+            display: grid;
+            grid-template-columns: 2fr; /* Default to single column */
+            gap: 20px;
+            margin-top: 20px;
+            justify-items: center; /* This will center the items horizontally in a single column */
+        }
+        @media (min-width: 768px) {
+            .event1-grid {
+                grid-template-columns: repeat(2fr); 
+                justify-items: center; 
+            }
+        }
+        .event1-grid .event-block {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the text within the block */
+        }
+        .event1-grid .event-block.highlight-blue {
+            background-color: #e0f2ff; /* Light blue background */
+            color: #2a478b; /* Dark blue text */
+        }
+        .event1-grid .event-block.highlight-red {
+            background-color: #ffe0e0; /* Light red background */
+            color: #a91e08; /* Dark red text */
+        }
+        .event1-grid .event-block.names-section-block {
+            background-color: #f0f0f0; /* Light gray background for names sections */
+            color: #3e3e7a; /* Darker text color for better contrast */
+            font-weight: 600;
+            line-height: 1.45;
+            white-space: pre-line; /* Preserve line breaks */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Ensures text is centered within these specific blocks */
+        }
+/* Animation for the card appearing */
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Lightbox Background */
+.lightbox-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000; /* Higher than navbar */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark black background */
+    overflow: auto;
+}
+
+/* Lightbox Image */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 80vh;
+    object-fit: contain; /* Ensures image isn't cropped */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: zoom 0.3s ease-in-out;
+}
+
+/* Caption Text */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff7e8;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Close Button */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    color: #c95c1c;
+}
+
+/* Animation */
+@keyframes zoom {
+    from {transform: scale(0.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* Mobile Adjustments */
+@media (max-width: 700px) {
+    .lightbox-content {
+        width: 95%;
+    }
+}
+/* Smooth transition for the Read More section */
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.hidden-content.show {
+  max-height: 200px; /* Adjust based on content length */
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .navbar-link {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 20px 20px 30px 20px;
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .flag, .cow {
+                flex: unset;
+                margin: 0; /* Remove side margins on small screens */
+            }
+            .center-top .title-marathi {
+                font-size: 1.7rem;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="मुख्य नेव्हिगेशन">
+        <div class="navbar-container">
+            <a href="#about" class="navbar-link" aria-label="आमच्याबद्दल विभाग">आमच्याबद्दल</a>
+            <a href="#images" class="navbar-link" aria-label="चित्रे आणि तपशील विभाग">चित्रे</a>
+            <a href="#events" class="navbar-link" aria-label="कार्यक्रम विभाग">कार्यक्रम</a>
+            <a href="#contact" class="navbar-link" aria-label="संपर्क विभाग">संपर्क</a>
+        </div>
+    </nav>
+
+    <main class="container" role="main">
+        <header>
+            <div class="flag" aria-label="सांस्कृतिक परंपरेचा झेंडा" role="img">
+                <img src="images.jpeg"
+                    alt="संस्थेचा केशरी धर्मध्वज"
+                    onerror="this.onerror=null;this.src='https://placehold.co/90x90/ffdcbc/651e1e?text=Flag';" />
+            </div>
+            <div class="center-top" role="heading" aria-level="1" id="main-title" tabindex="0">
+                <div class="title-marathi">संस्कृती जनजागृती संस्था</div>
+                <div class="subtitle-marathi">धर्मो रक्षति रक्षितः</div>
+            </div>
+            <div class="cow" aria-label="हिरव्या पार्श्वभूमीवर शांत असलेली गाई" role="img">
+                <img src="images (1).jpeg" alt="शांत आणि सन्माननीय पांढरी गाई"
+                    onerror="this.onerror=null;this.src='https://placehold.co/90x90/ffdcbc/651e1e?text=Cow';" />
+            </div>
+        </header>
+
+        <section id="about" class="py-10" aria-labelledby="about-title">
+            <h2 id="about-title" class="mb-8">आमच्याबद्दल </h2>
+            <div class="marathi-text">
+                <p tabindex="0">
+                    सस्नेह नमस्कार... <br/><br/>
+                    आपणांस आमंत्रित करण्यात येते की, भारतीय परंपरा, संस्कृती, विचारधारा अविरत प्रवाहित राहावी <span class="underline-red">‘‘यावदचंद्रोदिवाकरो ’’</span> सनातन परंपरा वृद्धिंगत होत राहो तसे भारतीय समाजाची सेवा करता यावी या हेतूने, संस्कृती जनजागृती सेवाभावी संस्था शिरपूर जिल्हा धुळे या संस्थेची स्थापना केली असून विविध कार्ये हाती घेतली आहेत. या संस्थेच्या कार्याची माहिती व कार्यपद्धती खालीलप्रमाणे आहे.<br/><br/>
+                    संशोधन उद्देश्य:
+                </p>
+                <ul>
+                    <li>१. भारतीय समाजात हिंदू संस्कृतीची जनजागृती करणे.</li>
+                    <li>२. गोसेवा प्रयोग प्रारंभ करणे, गोशाळा स्थापन करणे.</li>
+                    <li>३. शारीरिक स्वास्थ्य, सद्भभाव आणि समाजसेवेतून निवारा/पदार्थ दान करणे.</li>
+                    <li>४. ग्रामपंचायतीमध्ये शारीरिक स्वास्थ्यासाठी औषध निर्मितीसाठी औषध निर्माण करणे, प्राथमिक दवाखाना, चिकित्सा केंद्र प्रमाणे शिक्षण देणे.</li>
+                    <li>५. मानवी दुबळेपण, गो-गणेश, संवादयुती उपकारातर्फे, प्राथमिक डॉक्टर, पंचायत विचारचौथी चालविणे, योग निदान व चिकित्सा कार्यान्वयन करणे.</li>
+                    <li>६. संपूर्ण भारतीय गोष्टींचा जतन करणं, त्यांचा संवर्धन करणे, गो विज्ञान केंद्र चालविणे.</li>
+                    <li>७. भारतीय संस्कृतीचे संस्कार आणि संत विचारांच्या प्रयोगाचा प्रारंभ करणे, स्थानिकांना मदत करणे. तसेच अन्यथा चालविणे व रक्षणाची व्यवस्था करणे.</li>
+                    <li>८. सार्वजनिक वाहतूक, पायी प्रवास, गोशाळा स्थापत्य आणि दवाखाना, फिरता दवाखाना तसेच औषधांचा व्यवसाय करणे. गाईच्या निगा तंत्रज्ञान व त्याचे प्रबंधन देणे. तसेच जयंती, हिंदू मंडळांनंतर रांगोळी स्पर्धा आयोजित करणे.</li>
+                    <li>९. गावांमध्ये गो-सेवा करणे, आरोग्य क्षेत्रात मदत करणे, शिक्षण क्षेत्रात गरजूंना मदत करणे, बहुपर्यायी सेवा प्रदान करणे.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="red-line" aria-hidden="true" />
+
+        <section id="images" class="py-10" aria-labelledby="images-title">
+            <h2 id="images-title" class="mb-8">चित्रे </h2>
+            <div id="imageModal" class="lightbox-modal">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="fullImage">
+    <div id="caption"></div>
+</div>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="3.jpg"
+                        alt="संस्थेचा केशरी धर्मध्वज"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=धार्मिक+झेंडा';" />
+                    <div class="image-item-details">
+                        <h4>भारत माता की जय </h4>
+                        <p>.</p>
+                        <p>This saffron religious flag symbolizes Indian culture and tradition, representing the organization's objectives.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="2.jpg"
+                        alt="संस्थेच्या सेवाभावी कार्याचे चित्र"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=गोमाता';" />
+                    <div class="image-item-details">
+                        <h4>संस्थेच्या सेवाभावी कार्याचे चित्र</h4>
+                        <p>गोमाता ही भारतीय संस्कृतीत पवित्र मानली जाते, जी समृद्धी आणि पावित्र्याचे प्रतीक आहे.</p>
+                        <p>The cow is considered sacred in Indian culture, symbolizing prosperity and purity.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="1.jpg" 
+                         alt="संस्थेच्या सेवाभावी कार्याचे चित्र"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=भविष्यातील+कार्यक्रम';" />
+                    <div class="image-item-details">
+                        <h4>संस्थेच्या सेवाभावी कार्याचे चित्र</h4>
+                        <p>येथे संस्थेच्या भविष्यातील कार्यक्रमांचे किंवा उपक्रमांचे चित्र दिसेल.</p>
+                        <p>This space will feature images from future programs or initiatives of the organization.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="4.jpg" 
+                         alt="संस्थेच्या सेवाभावी कार्याचे चित्र"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=संस्थेचे+कार्य';" />
+                    <div class="image-item-details">
+                        <h4>संस्थेच्या सेवाभावी कार्याचे चित्र</h4>
+                        <p>संस्थेच्या विविध सेवाभावी कार्याची झलक येथे दिसेल.</p>
+                        <p>A glimpse into the various philanthropic activities of the organization will be shown here.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="5.jpg" 
+                         alt="संस्थेच्या सेवाभावी कार्याचे चित्र"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=संस्थेचे+कार्य';" />
+                    <div class="image-item-details">
+                        <h4>संस्थेच्या सेवाभावी कार्याचे चित्र</h4>
+                        <p>संस्थेच्या विविध सेवाभावी कार्याची झलक येथे दिसेल.</p>
+                        <p>A glimpse into the various philanthropic activities of the organization will be shown here.</p>
+                    </div>
+                </div><div class="image-item">
+                    <img src="6.jpg" 
+                         alt="संस्थेच्या सेवाभावी कार्याचे चित्र"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/ffdcbc/651e1e?text=संस्थेचे+कार्य';" />
+                    <div class="image-item-details">
+                        <h4>संस्थेच्या सेवाभावी कार्याचे चित्र</h4>
+                        <p>संस्थेच्या विविध सेवाभावी कार्याची झलक येथे दिसेल.</p>
+                        <p>A glimpse into the various philanthropic activities of the organization will be shown here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="red-line" aria-hidden="true" />
+
+        <section id="events" class="py-10" aria-labelledby="events-title">
+            <h2 id="events-title" class="mb-8">कार्यक्रम संपन्न </h2>
+
+            <h3 class="mb-4">कार्यक्रम दिनांक, वेळ आणि स्थळ </h3>
+            <div class="footer-invite" aria-label="कार्यक्रम दिनांक, वेळ आणि स्थळ" tabindex="0">
+                दिनांक - १८/०१/२०२४ वार शनिवार रोजी, वेळ - सायंकाळी ५ वा.<br/>
+                स्थल - हिरानगर (गुजर खर्डे), मेडिकल कॉलेजच्या समोर, खर्डे बु.ता. शिरपूर, जि. धुळे
+            </div>
+
+            <!-- <h3 class="mt-8 mb-4">मान्यवर उपस्थिती </h3>
+
+            <div class="event-grid">
+                <div class="event-block">
+                    <div aria-label="प्रेरणास्थान" class="highlight-blue" tabindex="0">
+                        प्रेरणास्थान<br/>
+                        माननीय भाऊसौ.श्री.अमरिशभाई पटेल <br/>
+                        (माजी शिक्षण मंत्री,  राज्य)
+                    </div>
+                </div>
+                <div class="event-block">
+                    <div aria-label="कार्यक्रमाचे अध्यक्ष" class="highlight-red" tabindex="0">
+                        कार्यक्रमाचे अध्यक्ष<br/>
+                        माननीय आ.श्री.काशीराम दादा पावरा <br/>
+                        (आमदार,शिरपूर)
+                    </div>
+                </div>
+                <div class="event-block">
+                    <div aria-label="धर्मध्वज पूजन" class="highlight-blue" tabindex="0">
+                        धर्मध्वज पूजन<br/>
+                        माननीय भाऊसौ.श्री. बबनराव चौधरी<br/>
+                        (जिल्हाध्यक्ष भारतीय जनता पार्टी धुळे)
+                    </div>
+                </div>
+                <div class="event-block">
+                    <div aria-label="फलंक अनावरण" class="highlight-red" tabindex="0">
+                        फलक अनावरण<br/>
+                        माननीय श्री. भूपेश्भाई पटेल <br/>
+                        (चेअरमन : प्रियदर्शिनी सहकारी सुतगिरणी, शिरपूर)
+                    </div>
+                </div>
+                <div class="event-block">
+                    <div aria-label="गाई पूजन" class="highlight-blue" tabindex="0">
+                        गौ-पूजन<br/>
+                        माननीय प्रा.डॉ. श्री. सुनिलजी गोराणे <br/>
+                        (मा.तालुका संचालक, राष्ट्रीय स्वयंसेवक संघ, शिरपूर)
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <h3 class="mt-8 mb-4 dignitary-heading">धर्मकार्य निर्देशक </h3>
+            <div class="event1-grid">
+                <div class="event-block names-section-block highlight-blue" aria-label="धर्मकार्य निर्देशकांची यादी" tabindex="0">
+                    बा. ब्र. महंत, सतिशदासजी महाराज भोंगे <br/>
+                    (मठाधिपती, श्रीराम मंदिर देवस्थान, शिरपूर)<br/>
+                    मा. श्री. चंपालालजी  पाटील<br/>
+                    (धर्म जागरण, जिल्हा मंडळ सदस्य, धुळे)
+                </div>
+            </div>
+            <h3 class="mt-8 mb-4 dignitary-heading">प्रमुख पाहुणे </h3>
+
+            <div class="event1-grid">
+                <div class="event-block names-section-block" aria-label="प्रमुख पाहुण्यांची यादी" tabindex="0">
+                    मा. दादासौ.श्री. देवेंद्र पाटील (उपाध्यक्ष, जि.प. धुळे)<br/>
+                    मा. भाऊसौ.डॉ. श्री. तुषार रंधे  (माजी अध्यक्ष, जि.प.धुळे)<br/>
+                    मा. बापुसौ.श्री. अरुण धोबी  (जिल्हा सरचिटणीस, भाजप, धुळे)<br/>
+                    मा. भाईसौ.श्री. हेमंत पाटील (जिल्हा चिटणीस , भाजप, धुळे)<br/>
+                    मा. नानासौ.श्री. किशोर माळी (तालुकाध्यक्ष, भाजप, शिरपूर)<br/>
+                    मा. भाईसौ.श्री. चंद्रकांत पाटील (सदस्य, पं.सं., शिरपूर)<br/>
+                    मा. भाईसौ.श्री. चंद्रकांत गुजर (सरपंच, खर्डे ता. शिरपूर)<br/>
+                    मा. भाईसौ. श्री. चिंतन पटेल (शहराध्यक्ष , भाजपा,शिरपूर )<br/>
+                    मा. बाळासौ.श्री. राजू टेलर (शिवसेना नेता, उबाठा )<br/>
+                    मा. नानासौ.श्री. एन.डी. पाटील (अध्यक्ष, श्री शनिदेव ट्रस्ट, शिरपूर)<br/>
+                    मा. श्री. के. के. पाटील साहेब (पोलीस निरीक्षक, शिरपूर)<br/>
+                    मा. श्री. महेन्द्र माळी साहेब (तहसीलदार, शिरपूर)<br/>
+                    मा. श्री. प्रशांत सरोदे  साहेब (मुख्याधिकारी, शि.व.न.पा., शिरपूर)<br/>
+                    मा. श्री. डि. एम. पाटील साहेब (अभियंता, महा.रा.वि.मं, शिरपूर)
+                </div>
+            </div>
+
+            <h3 class="mt-8 mb-4 dignitary-heading">सन्माननीय सभासद</h3>
+            <div class="event1-grid">
+                <div class="event-block names-section-block highlight-red" aria-label="सन्माननीय सभासदांची यादी" tabindex="0">
+                    श्री. बापू लोहार, श्री. राजेश्वर शिवदे<br/>
+                    श्री. अमोल भोई, श्री. भावेश लोहार<br/>
+                    श्री. चिराग पारधी , श्री. नरेश भोई<br/>
+                    श्री. विशाल पारधी , श्री. दिपक माळी<br/>
+                </div>
+            </div>
+
+            <h3 class="mt-8 mb-4 dignitary-heading">सन्माननीय सहकारी सदस्य</h3>
+            <div class="event1-grid">
+                <div class="event-block names-section-block highlight-blue" aria-label="सन्माननीय सहकारी सदस्यांची यादी" tabindex="0">
+                    श्री. राधेश्याम भोई,   श्री. अनिल वाडीले<br/>
+                    श्री. राज भोई,      श्री. गणेश साठे<br/>
+                    श्री. हरीष भोई,     श्री. दिपक धनगर<br/>
+                    श्री. विजय भोई,     श्री. राकेश बोरसे<br/>
+                    श्री. हिमांशू सोनवणे,श्री. चेतन भोई
+                </div>
+            </div>
+
+        </section> -->
+
+        <hr class="red-line" aria-hidden="true" />
+
+        <section id="contact" class="py-10" aria-labelledby="contact-title">
+            <h2 id="contact-title" class="mb-8">संपर्क </h2>
+            <div class="footer-text" tabindex="0" aria-label="निमंत्रक आणि आमंत्रणाचा संदेश">
+                संस्थापक<br/>
+                श्री. रविंद्र एम. भोई (९८२२९४४४७६)<br/>
+                (संस्थापक अध्यक्ष - संस्कृती जनजागृती सेवाभावी संस्था, शिरपूर)<br/>
+                व सर्व सन्मानीय सभासद
+            </div>
+            <div class="text-center mt-5">
+                <a href="tel:+919822944476" class="btn">
+                    आता कॉल करा (Call Now)
+                </a>
+            </div>
+            <h3 class="mt-8 mb-4 dignitary-heading">सन्माननीय सभासद</h3>
+            <div class="event1-grid">
+                <div class="event-block names-section-block highlight-red" aria-label="सन्माननीय सभासदांची यादी" tabindex="0">
+                    श्री. बापू लोहार, श्री. राजेश्वर शिवदे<br/>
+                    श्री. अमोल भोई, श्री. भावेश लोहार<br/>
+                    श्री. चिराग पारधी , श्री. नरेश भोई<br/>
+                    श्री. विशाल पारधी , श्री. दिपक माळी<br/>
+                </div>
+            </div>
+        </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("fullImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close-lightbox");
+
+    // Select all images inside the gallery
+    const images = document.querySelectorAll(".image-item img");
+
+    images.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            // Use the alt text or h4 title for the caption
+            const details = this.parentElement.querySelector("h4");
+            captionText.innerHTML = details ? details.innerText : this.alt;
+        }
+    });
+
+    // Close when "X" is clicked
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close when clicking anywhere outside the image
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+        // Function for Read More toggle
+        function toggleReadMore(btn) {
+            const content = btn.previousElementSibling;
+            if (content.classList.contains("show")) {
+                content.classList.remove("show");
+                btn.innerText = "Read More";
+            } else {
+                content.classList.add("show");
+                btn.innerText = "Read Less";
+            }
+        }
+
+        // Trigger animations when elements enter the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.image-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+    </main>
+</body>
+</html>
