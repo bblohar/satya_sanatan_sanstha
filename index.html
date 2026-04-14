@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>संस्कृती जनजागृती संस्था</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Baloo 2 फोंट इम्पोर्ट */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+        body {
+            background: linear-gradient(180deg, #fff7e8 0%, #f9d5ba 100%);
+            font-family: 'Baloo 2', cursive, serif;
+            color: #651e1e;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* मुख्य कंटेनर */
+        .container-main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #ffdcbc;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(180, 115, 72, 0.3);
+            padding: 20px;
+            border-top: 12px solid #c95c1c;
+            border-bottom: 12px solid #c95c1c;
+        }
+
+        /* न्यूज मजकूर लपवण्यासाठी आणि दाखवण्यासाठी */
+        .more-content {
+            display: none;
+        }
+        
+        /* नेव्हिगेशन बार */
+        .nav-link {
+            color: #fff7e8;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #a94a15;
+            border-radius: 8px;
+        }
+
+        /* लाईटबॉक्स (मोठ्या फोटोसाठी) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-[#c95c1c] sticky top-0 z-50 shadow-md p-3">
+        <div class="max-width-1200 mx-auto flex justify-center space-x-4">
+            <a href="#about" class="nav-link">आमच्याबद्दल</a>
+            <a href="#news" class="nav-link">चित्रे</a>
+            <a href="#events" class="nav-link">कार्यक्रम</a>
+            <a href="#contact" class="nav-link">संपर्क</a>
+        </div>
+    </nav>
+
+    <main class="container-main mx-auto px-4 md:px-8">
+        
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <img src="images.jpeg" alt="धर्मध्वज" class="w-24 h-auto rounded-lg">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-[#b43a0a]">संस्कृती जनजागृती संस्था</h1>
+                <p class="text-xl italic text-[#d74900] font-bold">"धर्मो रक्षति रक्षितः"</p>
+            </div>
+            <img src="images (1).jpeg" alt="गौमाता" class="w-24 h-auto rounded-lg">
+        </header>
+
+        <section id="about" class="bg-[#fff7e8] p-6 md:p-10 rounded-xl shadow-inner mb-12">
+            <h2 class="text-4xl font-bold text-[#b43a0a] text-center mb-8 border-b-2 border-[#c95c1c] pb-2">आमच्याबद्दल</h2>
+            <div class="text-lg font-semibold space-y-4 text-justify">
+                <p>सस्नेह नमस्कार...</p>
+                <p>आपणांस आमंत्रित करण्यात येते की, भारतीय परंपरा, संस्कृती, विचारधारा अविरत प्रवाहित राहावी <span class="underline decoration-[#db4520] decoration-2">"यावदचंद्रोदिवाकरो"</span> सनातन परंपरा वृद्धिंगत होत राहो तसे भारतीय समाजाची सेवा करता यावी या हेतूने, संस्कृती जनजागृती सेवाभावी संस्था शिरपूर जिल्हा धुळे या संस्थेची स्थापना केली असून विविध कार्ये हाती घेतली आहेत. या संस्थेच्या कार्याची माहिती व कार्यपद्धती खालीलप्रमाणे आहे.</p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-4">संशोधन उद्देश्य:</h3>
+                <ul class="list-none space-y-3">
+                    <li>१. भारतीय समाजात हिंदू संस्कृतीची जनजागृती करणे.</li>
+                    <li>२. गोसेवा प्रयोग प्रारंभ करणे, गोशाळा स्थापन करणे.</li>
+                    <li>३. शारीरिक स्वास्थ्य, सद्भभाव आणि समाजसेवेतून निवारा/पदार्थ दान करणे.</li>
+                    <li>४. ग्रामपंचायतीमध्ये शारीरिक स्वास्थ्यासाठी औषध निर्मितीसाठी औषध निर्माण करणे, प्राथमिक दवाखाना, चिकित्सा केंद्र प्रमाणे शिक्षण देणे.</li>
+                    <li>५. मानवी दुबळेपण, गो-गणेश, संवादयुती उपकारातर्फे, प्राथमिक डॉक्टर, पंचायत विचारचौथी चालविणे, योग निदान व चिकित्सा कार्यान्वयन करणे.</li>
+                    <li>६. संपूर्ण भारतीय गोष्टींचा जतन करणं, त्यांचा संवर्धन करणे, गो विज्ञान केंद्र चालविणे.</li>
+                    <li>७. भारतीय संस्कृतीचे संस्कार आणि संत विचारांच्या प्रयोगाचा प्रारंभ करणे, स्थानिकांना मदत करणे. तसेच अन्यथा चालविणे व रक्षणाची व्यवस्था करणे.</li>
+                    <li>८. सार्वजनिक वाहतूक, पायी प्रवास, गोशाळा स्थापत्य आणि दवाखाना, फिरता दवाखाना तसेच औषधांचा व्यवसाय करणे. गाईच्या निगा तंत्रज्ञान व त्याचे प्रबंधन देणे. तसेच जयंती, हिंदू मंडळांनंतर रांगोळी स्पर्धा आयोजित करणे.</li>
+                    <li>९. गावांमध्ये गो-सेवा करणे, आरोग्य क्षेत्रात मदत करणे, शिक्षण क्षेत्रात गरजूंना मदत करणे, बहुपर्यायी सेवा प्रदान करणे.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="news" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#b43a0a] mb-8 text-center">बातम्या आणि उपक्रम</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="1.jpg" alt="बातम्या" class="w-full h-56 object-cover cursor-zoom-in" onclick="showImg(this.src)">
+                    <div class="p-5 flex-grow">
+                        <h4 class="font-bold text-xl text-[#b43a0a] mb-2">शिरपुरात फलक अनावरण</h4>
+                        <p class="text-gray-700 text-sm">शिरपूर तालुक्यातील खर्डे येथे संस्कृती जनजागृती सेवाभावी संस्थेचे फलक अनावरण आ. काशिराम पावरा यांच्या हस्ते...</p>
+                        <div id="more-1" class="more-content text-gray-700 text-sm mt-2">
+                            धुळे भाजपा जिल्हाध्यक्ष बबनराव चौधरी यांच्या प्रमुख उपस्थितीत हा सोहळा संपन्न झाला. यावेळी अनेक मान्यवर आणि ग्रामस्थ उपस्थित होते.
+                        </div>
+                        <button onclick="toggleReadMore(1)" id="btn-1" class="text-blue-600 font-bold mt-3 text-sm focus:outline-none">Read More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="4.jpg" alt="धुळे मैदान बातमी" class="w-full h-56 object-cover cursor-zoom-in" onclick="showImg(this.src)">
+                    <div class="p-5 flex-grow">
+                        <h4 class="font-bold text-xl text-[#b43a0a] mb-2">धुळे मैदान बातमी</h4>
+                        <p class="text-gray-700 text-sm">संस्थेच्या माध्यमातून हिंदू संस्कृतीची जनजागृती करण्यासाठी धुळे जिल्ह्यात विशेष मोहीम...</p>
+                        <div id="more-2" class="more-content text-gray-700 text-sm mt-2">
+                            यावेळी धर्म जागरण जिल्हा मंडळाचे सदस्य आणि पदाधिकारी मोठ्या संख्येने उपस्थित होते.
+                        </div>
+                        <button onclick="toggleReadMore(2)" id="btn-2" class="text-blue-600 font-bold mt-3 text-sm focus:outline-none">Read More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="5.jpg" alt="अन्नदान उपक्रम" class="w-full h-56 object-cover cursor-zoom-in" onclick="showImg(this.src)">
+                    <div class="p-5 flex-grow">
+                        <h4 class="font-bold text-xl text-[#b43a0a] mb-2">अन्नदान उपक्रम</h4>
+                        <p class="text-gray-700 text-sm">गरजूंना अन्नाचे वाटप करून संस्थेच्या वतीने सामाजिक बांधिलकी जपली जात आहे...</p>
+                        <div id="more-3" class="more-content text-gray-700 text-sm mt-2">
+                            शनि मंदिर परिसरात आयोजित या उपक्रमात अनेक कुटुंबांना लाभ मिळाला.
+                        </div>
+                        <button onclick="toggleReadMore(3)" id="btn-3" class="text-blue-600 font-bold mt-3 text-sm focus:outline-none">Read More</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer id="contact" class="bg-[#9e2f1e] text-white p-8 rounded-xl text-center shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">संपर्क</h3>
+            <p class="mb-2">संस्थापक: श्री. रविंद्र एम. भोई</p>
+            <p class="mb-4 text-lg">मोबाईल: ९८२२९४४४७६</p>
+            <a href="tel:+919822944476" class="inline-block bg-white text-[#9e2f1e] px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-100 transition duration-300">आता कॉल करा</a>
+        </footer>
+
+    </main>
+
+    <div id="imgModal" class="modal flex items-center justify-center p-4" onclick="this.style.display='none'">
+        <span class="absolute top-5 right-5 text-white text-4xl font-bold cursor-pointer">&times;</span>
+        <img id="fullImg" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl">
+    </div>
+
+    <script>
+        // Read More फंक्शन
+        function toggleReadMore(id) {
+            const moreText = document.getElementById(`more-${id}`);
+            const btnText = document.getElementById(`btn-${id}`);
+
+            if (moreText.style.display === "inline") {
+                moreText.style.display = "none";
+                btnText.innerHTML = "Read More";
+            } else {
+                moreText.style.display = "inline";
+                btnText.innerHTML = "Read Less";
+            }
+        }
+
+        // फोटो मोठा करण्यासाठी फंक्शन
+        function showImg(src) {
+            document.getElementById("imgModal").style.display = "flex";
+            document.getElementById("fullImg").src = src;
+        }
+    </script>
+</body>
+</html>
